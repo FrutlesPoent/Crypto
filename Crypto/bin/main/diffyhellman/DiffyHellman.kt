@@ -4,8 +4,8 @@ import domain.Keys
 import domain.PrimeNumbers
 import fastpow.FastPow
 import utils.Generate
-import utils.isPrime
-import utils.pow
+import utils.Generate.isPrime
+import utils.Generate.pow
 
 object DiffyHellman {
 

@@ -1,6 +1,5 @@
 package utils
 
-import java.math.BigInteger
 import kotlin.random.Random
 
 object Generate {
@@ -13,9 +12,6 @@ object Generate {
 
     fun generateNumber(from: Int, to: Int): Int =
         Random.nextInt(from, to)
-
-    fun generateBytes(): Int =
-        Random.nextBits(8)
 
     fun generateNumber(until: Int): Int =
         Random.nextInt(0, until)
@@ -31,7 +27,6 @@ object Generate {
         return number
     }
 }
-
 fun Int.isPrime(): Boolean {
     val mutableNumber = this
     for (i in 2..mutableNumber / 2) {
