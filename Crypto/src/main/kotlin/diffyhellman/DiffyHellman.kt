@@ -12,6 +12,8 @@ object DiffyHellman {
     fun diffyHellman(x: Int, y: Int): Keys {
         val primeNumbers = generatePQ()
         val g = generateG(primeNumbers)
+        val x = Generate.generateNumber(1, primeNumbers.p - 1)
+        val y = Generate.generateNumber(1, primeNumbers.p - 1)
 
         val y1 = FastPow.pow(g, y, primeNumbers.p)
         val y2 = FastPow.pow(g, x, primeNumbers.p)
