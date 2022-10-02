@@ -5,6 +5,9 @@ import java.math.BigInteger
 object FastPow {
 
     fun pow(number: Int, degree: Int, mod: Int): BigInteger {
+        if (degree == 0){
+            return 1.toBigInteger().mod(mod.toBigInteger());
+        }
         val listOfNumbers = calculateDegree(divideDegree(degree), mod, number).reversed()
         val numberInBinaryList = mutableListOf<Int>()
         (Integer.toBinaryString(degree)).toCharArray().forEach { numberInBinaryList.add(it.digitToInt()) }
@@ -20,6 +23,9 @@ object FastPow {
     }
 
     fun pow(number: BigInteger, degree: Int, mod: Int): BigInteger {
+        if (degree == 0){
+            return 1.toBigInteger().mod(mod.toBigInteger());
+        }
         val listOfNumbers = calculateDegree(divideDegree(degree), mod, number.toInt()).reversed()
         val numberInBinaryList = mutableListOf<Int>()
         (Integer.toBinaryString(degree)).toCharArray().forEach { numberInBinaryList.add(it.digitToInt()) }

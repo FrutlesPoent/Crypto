@@ -15,6 +15,9 @@ object Generate {
     fun generateNumber(from: Int, to: Int): Int =
         Random.nextInt(from, to)
 
+    fun generateNumber(from: Long, to: Long): Long =
+        Random.nextLong(from, to)
+
     fun generateBytes(): Int =
         Random.nextBits(8)
 
@@ -35,7 +38,7 @@ object Generate {
 
 fun Int.isPrime(): Boolean {
     val mutableNumber = this
-    for (i in 2..mutableNumber / 2) {
+    for (i in 2..sqrt(mutableNumber.toDouble()).toInt()) {
         if (mutableNumber % i == 0) {
             return false
         }
