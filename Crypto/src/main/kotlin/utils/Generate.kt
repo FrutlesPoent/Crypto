@@ -1,6 +1,7 @@
 package utils
 
 import java.math.BigInteger
+import kotlin.math.sqrt
 import kotlin.random.Random
 
 object Generate {
@@ -38,6 +39,15 @@ fun Int.isPrime(): Boolean {
         if (mutableNumber % i == 0) {
             return false
         }
+    }
+    return true
+}
+
+fun Long.isPrime(): Boolean {
+    val mutableNumber = this
+    for (i in 2.. sqrt(mutableNumber.toDouble()).toInt()) {
+        if (mutableNumber.mod(i) == 0)
+            return false
     }
     return true
 }

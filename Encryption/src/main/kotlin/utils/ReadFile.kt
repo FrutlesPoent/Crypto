@@ -10,4 +10,7 @@ object ReadFile {
     fun readFileUsingResource(filename: String) {
         this::class.java.getResource(filename)?.readText(Charsets.UTF_8)
     }
+
+    fun readFileAsText(filename: String): List<String> =
+        File(filename).readLines()
 }
