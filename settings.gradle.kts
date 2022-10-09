@@ -5,4 +5,5 @@ include(":Crypto")
 include(":App")
 include(":Encryption")
 include(":Signature")
+include(":Poker")
 
