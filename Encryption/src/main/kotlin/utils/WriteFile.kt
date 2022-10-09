@@ -12,4 +12,8 @@ object WriteFile {
     fun writeToFileText(array: List<Int>, filename: String) {
         File(filename).printWriter().use { out -> array.forEach { out.println(it) } }
     }
+
+    fun writeToFileTextBigInteger(array: List<BigInteger>, filename: String) {
+        File(filename).printWriter().use { out -> array.forEach { out.println(it) } }
+    }
 }

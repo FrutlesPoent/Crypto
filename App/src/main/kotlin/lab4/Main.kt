@@ -4,5 +4,5 @@ import poker.MentalPoker
 
 fun main() {
 
-    MentalPoker.poker()
+    MentalPoker.poker(2)
 }

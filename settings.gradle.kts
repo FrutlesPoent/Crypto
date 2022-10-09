@@ -6,4 +6,5 @@ include(":App")
 include(":Encryption")
 include(":Signature")
 include(":Poker")
+include(":BlindSignature")
 

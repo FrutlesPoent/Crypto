@@ -1,5 +1,6 @@
 package utils
 
+import gcd.GCD
 import java.math.BigInteger
 import kotlin.math.sqrt
 import kotlin.random.Random
@@ -48,7 +49,7 @@ fun Int.isPrime(): Boolean {
 
 fun Long.isPrime(): Boolean {
     val mutableNumber = this
-    for (i in 2.. sqrt(mutableNumber.toDouble()).toInt()) {
+    for (i in 2..sqrt(mutableNumber.toDouble()).toInt()) {
         if (mutableNumber.mod(i) == 0)
             return false
     }
