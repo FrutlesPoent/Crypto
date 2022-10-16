@@ -7,4 +7,5 @@ include(":Encryption")
 include(":Signature")
 include(":Poker")
 include(":BlindSignature")
+include(":FiatShamir")
 
